@@ -1,3 +1,5 @@
+package lab4_4;
+
 public class PrimeFinder implements Runnable {
     public long target;
     public long prime;
@@ -5,7 +7,7 @@ public class PrimeFinder implements Runnable {
     private Thread runner;
 
     PrimeFinder(long inTarget) throws NegativeNumberException {
-       if (inTarget<0) throw new NegativeNumberException();
+       if (inTarget<0) throw new NegativeNumberException();  //MODYFIKACJA KONSTRUKTORA
         target = inTarget;
         if (runner == null) {
             runner = new Thread(this);
@@ -36,10 +38,12 @@ public class PrimeFinder implements Runnable {
     }
 }
 
+
+//NOWY WYJĄTEK
 class NegativeNumberException extends Exception{
 
     public NegativeNumberException (){
-        System.out.println("Napotkano wyjątek NegativeNumberException");
+        System.out.println("Napotkano wyjątek lab4_4.NegativeNumberException");
     }
 
     }

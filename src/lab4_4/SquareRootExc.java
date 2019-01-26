@@ -1,3 +1,5 @@
+package lab4_4;
+
 public class SquareRootExc {
     public static void main(String[] args) {
 
@@ -12,9 +14,10 @@ public class SquareRootExc {
 
     }
 
+    //METODA OBLICZAJĄCA PIERWIATEK
      static double squareCalc (String string) throws IllegalArgumentException{
         if (Double.parseDouble(string)<0)
-            throw new IllegalArgumentException("Liczba mniejsza od 0!");
+            throw new IllegalArgumentException("Liczba mniejsza od 0!");  //LICZBA UJEMNA - WYJATEK
 
         return Math.sqrt(Double.parseDouble(string));
 
